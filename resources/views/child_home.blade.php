@@ -1,7 +1,7 @@
 @extends('home')
 	
 @section('title','home')
-        @section('header')
+        @section('sidebar')
         <div class="tm-header-wrapper">
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -43,7 +43,8 @@
         </div>
     </header>
     @endsection
-    @section('content')
+
+    @section('header')
     <div class="container-fluid">
         <main class="tm-main">
             <!-- Search form -->
@@ -56,7 +57,10 @@
                         </button>                                
                     </form>
                 </div>                
-            </div>            
+            </div>
+            @endsection
+
+            @section('content')            
             <div class="row tm-row">
                 <article class="col-12 col-md-6 tm-post">
                     <hr class="tm-hr-primary">
@@ -195,11 +199,8 @@
                 </article>
                 @show
             </div>
-            @endsection
-
             <div class="row tm-row tm-mt-100 tm-mb-75">
                 <div class="tm-prev-next-wrapper">
-                    @section('sidebar')
                     <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next disabled tm-mr-20">Prev</a>
                     <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next">Next</a>
                 </div>
@@ -222,7 +223,10 @@
                         </ul>
                     </nav>
                 </div>                
-            </div>            
+            </div>
+            @endsection
+            
+            @section('footer')            
             <footer class="row tm-row">
                 <hr class="col-12">
                 <div class="col-md-6 col-12 tm-color-gray">
@@ -235,9 +239,3 @@
         </main>
     </div>
     @endsection
-    @section('footer')
-    <script src="{{ asset('blog/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('blog/js/templatemo-script.js') }}"></script>
-    @endsection
-</body>
-</html>

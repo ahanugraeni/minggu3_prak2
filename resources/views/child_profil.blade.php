@@ -1,7 +1,7 @@
 @extends('profil')
 	
 @section('title','profil')
-        @section('header')
+        @section('sidebar')
 	<header class="tm-header" id="tm-header">
         <div class="tm-header-wrapper">
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
@@ -21,7 +21,6 @@
                     <li class="tm-nav-item active"><a href="http://127.0.0.1:8000/profil" class="tm-nav-link">
                         <i class="fas fa-users"></i>
                         About Me
-                    
                     </a></li>
                 </ul>
             </nav>
@@ -45,7 +44,8 @@
         </div>
     </header>
     @endsection
-    @section('content')
+
+    @section('header')
     <div class="container-fluid">
         <main class="tm-main">
             <!-- Search form -->
@@ -58,7 +58,10 @@
                         </button>                                
                     </form>
                 </div>                
-            </div>            
+            </div> 
+            @endsection
+            
+            @section('content')           
             <div class="row tm-row tm-mb-45">
                 <div class="col-12">
                     <hr class="tm-hr-primary tm-mb-55">
@@ -186,8 +189,9 @@
                     </div>
                 </div>
             </div> 
-            @endsection 
-            @section('sidebar')      
+            @endsection
+
+            @section('footer')      
             <footer class="row tm-row">
                 <div class="col-md-6 col-12 tm-color-gray">
                     Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
@@ -195,13 +199,8 @@
                 <div class="col-md-6 col-12 tm-color-gray tm-copyright">
                     Copyright 2020 Xtra Blog Company Co. Ltd.
                 </div>
-            @endsection
-            @section('footer')
             </footer>
         </main>
     </div>
-    <script src="{{ asset('blog/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('blog/js/templatemo-script.js') }}"></script>
     @endsection
-</body>
-</html>
+
